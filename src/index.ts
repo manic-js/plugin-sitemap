@@ -1,5 +1,5 @@
-import { createPlugin } from 'manicjs/config';
-import { generateSitemapXml } from './generate';
+import { createPlugin } from "manicjs/config";
+import { generateSitemapXml } from "./generate";
 
 /**
  * Sitemap generation configuration
@@ -9,14 +9,7 @@ export interface SitemapConfig {
   /** Base URL of the site, e.g. "https://example.com" */
   hostname: string;
   /** @default "weekly" */
-  changefreq?:
-    | 'always'
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'yearly'
-    | 'never';
+  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   /** @default 0.8 */
   priority?: number;
   /** Route paths to exclude from the sitemap */
@@ -45,12 +38,12 @@ export interface SitemapConfig {
  */
 export function sitemap(config: SitemapConfig) {
   return createPlugin({
-    name: 'sitemap',
+    name: "sitemap",
     staticFiles: [
       {
-        path: '/sitemap.xml',
-        content: ctx => generateSitemapXml(ctx.pageRoutes, config),
-        contentType: 'application/xml',
+        path: "/sitemap.xml",
+        content: (ctx) => generateSitemapXml(ctx.pageRoutes, config),
+        contentType: "application/xml",
       },
     ],
   });

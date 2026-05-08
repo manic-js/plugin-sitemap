@@ -7,6 +7,10 @@
     "seo",
     "sitemap"
   ],
+  "homepage": "https://github.com/manic-js/plugin-sitemap#readme",
+  "bugs": {
+    "url": "https://github.com/manic-js/plugin-sitemap/issues"
+  },
   "license": "GPL-3.0",
   "author": "Rahuletto",
   "repository": {
@@ -29,16 +33,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "manicjs": "^0.7.4"
-  },
   "devDependencies": {
     "@shikijs/transformers": "^4.0.2",
     "@types/mdx": "^2.0.13",
     "fumadocs-docgen": "^3.0.10"
   },
-  "homepage": "https://github.com/manic-js/plugin-sitemap#readme",
-  "bugs": {
-    "url": "https://github.com/manic-js/plugin-sitemap/issues"
+  "peerDependencies": {
+    "manicjs": "^0.7.4"
   }
 }
